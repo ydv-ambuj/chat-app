@@ -1,0 +1,158 @@
+.sidebar {
+  background: rgba(129, 133, 178, 0.1);
+  height: 100%;
+  padding: 20px;
+  border-radius: 0 16px 16px 0;
+  overflow-y: auto;
+  color: white;
+  min-width: 0;
+}
+
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-logo {
+  max-width: 160px;
+}
+
+.menu-container {
+  position: relative;
+  padding: 8px 0;
+}
+
+.menu-icon {
+  max-height: 20px;
+  cursor: pointer;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20;
+  width: 100px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #282142;
+  border: 1px solid gray;
+  color: #f5f5f5;
+  display: none;
+}
+
+.menu-container:hover .menu-dropdown {
+  display: block;
+}
+
+.menu-item {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-dropdown hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid gray;
+}
+
+.search-box {
+  margin-top: 20px;
+  background: #282142;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+
+.search-icon {
+  width: 12px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 13px;
+}
+
+.search-input::placeholder {
+  color: #c8c8c8;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.user-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  padding-left: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  background: rgba(40, 33, 66, 0.3);
+}
+
+.active-user {
+  background: rgba(40, 33, 66, 0.5);
+}
+
+.user-avatar {
+  width: 35px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+
+.online-status {
+  color: #4ade80;
+  font-size: 12px;
+}
+
+.offline-status {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+
+.unread-count {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .user-card {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-sidebar-mobile {
+    display: none;
+  }
+}
